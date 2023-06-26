@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     include "./utilities/scrub.php";
     include "./utilities/errorChecking.php";
     if(isset($_POST['submit'])){
@@ -40,7 +41,13 @@
             if($stmt = mysqli_prepare($con, $query)){
                 mysqli_stmt_bind_param($stmt, "sssss", $firstname,$lastname,$sex,$birthday,$course);
                 mysqli_stmt_execute($stmt);
+                mysqli_stmt_close($stmt);
+                
+
+                // $id = mysqli_insert_id($con);
                 $isSuccessful = true;
+                // echo $id;
+                $_SESSION['fromSignUp'] = true;
                 header("location: confirmation.php" );
             }   
             else{
