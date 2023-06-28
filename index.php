@@ -33,13 +33,13 @@
             include "./mysqlCon/openCon.php";
             // prepare statement
             $query = 
-            "INSERT INTO students(firstname, lastname, gender, birthday, course)
+            "INSERT INTO students(firstname, lastname, birthday, sex, course)
             VALUES(?,?,?,?,?)
             ";
             $isSuccessful= false;
             // validate
             if($stmt = mysqli_prepare($con, $query)){
-                mysqli_stmt_bind_param($stmt, "sssss", $firstname,$lastname,$sex,$birthday,$course);
+                mysqli_stmt_bind_param($stmt, "sssss", $firstname,$lastname,$birthday,$sex,$course);
                 mysqli_stmt_execute($stmt);
                 mysqli_stmt_close($stmt);
                 
@@ -126,10 +126,13 @@
                     <option value="programmer">Programmer</option>
                 </select>
             </div>
-            <div class="text-xl">
-                <button name="submit" type="submit" class="bg-green-500 py-2 rounded w-full text-white hover:bg-green-600">
+            <div class="text-xl flex">
+                <button name="submit" type="submit" class="bg-green-500 py-2 px-4 w-1/4 rounded text-white hover:bg-green-600">
                     Submit
                 </button>
+                <a href="officialList.php" class="bg-slate-500 py-2 rounded px-4 w-1/4 text-white hover:bg-gray-600">
+                    See Oficial List
+                </a>
             </div>
         </form>
     </h1>
