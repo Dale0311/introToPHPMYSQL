@@ -96,7 +96,7 @@
             </tbody>
         </table>
         <div class="flex justify-end py-2">
-            <a href="." class="bg-green-500 py-2 rounded px-4 text-white hover:bg-green-600">Enroll Another Student</a>
+            <a href="enrollStudent.php" class="bg-green-500 py-2 rounded px-4 text-white hover:bg-green-600">Enroll Another Student</a>
         </div>
     </div>
 </body>
