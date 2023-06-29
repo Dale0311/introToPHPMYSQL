@@ -88,21 +88,21 @@
                 <label for="firstname" class="block">
                     Firstname:
                 </label>
-                <input type="text" id="firstname" name="firstname" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 required:bg-red-500 w-full rounded">
+                <input required type="text" id="firstname" name="firstname" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 w-full rounded">
             </div>
             <!-- lastname -->
             <div class="text-xl">
                 <label for="lastname" class="block">
                     Lastname:
                 </label>
-                <input type="text" id="lastname" name="lastname" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 required:bg-red-500 w-full rounded">
+                <input required type="text" id="lastname" name="lastname" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 w-full rounded">
             </div>
             <!-- sex -->
             <div class="text-xl">
                 <label for="sex" class="block">
                     Sex:
                 </label>
-                <select name="sex" id="sex" class="w-full py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 required:bg-red-500 rounded">
+                <select name="sex" id="sex" class="w-full py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 rounded" required>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
@@ -112,25 +112,25 @@
                 <label for="birthday" class="block">
                     Birthday:
                 </label>
-                <input type="date" id="birthday" name="birthday" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 required:bg-red-500 w-full rounded">
+                <input required type="date" id="birthday" name="birthday" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 w-full rounded">
             </div>
             <!-- course -->
             <div class="text-xl">
                 <label for="course" class="block">
                     Course:
                 </label>
-                <select name="course" id="course" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 required:bg-red-500 w-full rounded">
+                <select name="course" id="course" class="py-2 px-4 border border-black focus:outline-none focus:border-2 focus:border-sky-400 focus:shadow-md focus:shadow-sky-200 w-full rounded" required>
                     <option value="scientist">Scientist</option>
                     <option value="chemist">Chemist</option>
                     <option value="pilot">Pilot</option>
                     <option value="programmer">Programmer</option>
                 </select>
             </div>
-            <div class="text-xl flex">
+            <div class="text-xl flex space-x-4">
                 <button name="submit" type="submit" class="bg-green-500 py-2 px-4 w-1/4 rounded text-white hover:bg-green-600">
                     Submit
                 </button>
-                <a href="officialList.php" class="bg-slate-500 py-2 rounded px-4 w-1/4 text-white hover:bg-gray-600">
+                <a href="officialList.php" class="bg-slate-500 py-2 rounded px-4 w-1/4 text-white hover:bg-gray-600 text-center">
                     See Oficial List
                 </a>
             </div>
