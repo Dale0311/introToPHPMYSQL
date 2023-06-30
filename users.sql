@@ -24,49 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `students` (
-  `id` int NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `sex` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `birthday` date NOT NULL,
-  `course` varchar(255) NOT NULL
+CREATE TABLE `users` (
+  `userID` int NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `students`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `students` (`id`, `firstname`, `lastname`, `sex`, `birthday`, `course`) VALUES
-(1, ' Albert Dale', 'Cabarle', 'male', '2001-06-11', 'programmer'),
-(2, 'Justine', 'Pasion', 'male', '1999-07-27', 'scientist'),
-(3, ' KC', 'Rivera', 'female', '2000-12-04', 'chemist'),
-(4, 'Gab', 'Lobo', 'male', '2021-11-21', 'pilot'),
-(5, 'John', 'Hipolito', 'male', '2002-02-06', 'scientist'),
-(6, 'Luffy', 'Monkey', 'male', '1121-02-21', 'scientist');
+INSERT INTO `users` (`userID`, `username`, `password`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(2, 'dale123', '32250170a0dca92d53ec9624f336ca24');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `students`
+-- Indexes for table `users`
 --
-ALTER TABLE `students`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`userID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `students`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `students`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+ALTER TABLE `users`
+  MODIFY `userID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,10 +1,10 @@
 <?php 
-    $host = 'localhost';
-    $username = 'root';
-    $pass = '';
-    $dbname = 'enrollmentSystem';
+    $dbHost = 'localhost';
+    $dbUsername = 'root';
+    $dbPass = '';
+    $dbName = 'enrollmentSystem';
 
-    $con = mysqli_connect($host,$username,$pass,$dbname);
+    $con = mysqli_connect($dbHost,$dbUsername,$dbPass,$dbName);
 
     $con? "": die();
 ?>
